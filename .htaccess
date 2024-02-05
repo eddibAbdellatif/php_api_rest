@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+        RewriteBase /php_api_rest/
+
+        # Transformer http://127.0.0.1/php_api_rest/readAll en http://127.0.0.1/php_api_rest/controllers/readAll.php
+        RewriteRule ^readAll$ controllers/readAll.php [L]
+
+        # Transformer http://127.0.0.1/php_api_rest/delete/1 en http://127.0.0.1/php_api_rest/controllers/delete.php?id=1
+        RewriteRule ^delete/(\d+)$ controllers/delete.php?id=$1 [L]
+
+        # Transformer http://127.0.0.1/php_api_rest/update/1 en http://127.0.0.1/php_api_rest/controllers/update.php?id=1
+        RewriteRule ^update/(\d+)$ controllers/update.php?id=$1 [L]
+
+        # Transformer http://127.0.0.1/php_api_rest/create en http://127.0.0.1/php_api_rest/controllers/create.php
+        RewriteRule ^create$ controllers/create.php [L]
+
+</IfModule>
