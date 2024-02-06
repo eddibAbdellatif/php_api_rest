@@ -3,7 +3,8 @@
 ### git remote set-url origin https://github.com/eddibAbdellatif/php_api_rest.git
 
 
-##Récupérez les modifications depuis la branche distante (origin/master) :
+## git
+Récupérez les modifications depuis la branche distante (origin/master) :
 git fetch origin master
 
 Fusionnez les modifications distantes dans votre branche locale (master) :
